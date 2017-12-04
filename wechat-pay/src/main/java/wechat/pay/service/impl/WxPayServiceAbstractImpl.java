@@ -4,10 +4,14 @@ package wechat.pay.service.impl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+
 import wechat.pay.bean.WxPayApiData;
 import wechat.pay.bean.notify.WxPayOrderNotifyResult;
+import wechat.pay.bean.notify.WxPayRefundNotifyResult;
 import wechat.pay.bean.request.WxOrderComRequest;
+import wechat.pay.bean.request.WxPayRefundRequest;
 import wechat.pay.bean.result.WxPayBaseResult;
+import wechat.pay.bean.result.WxPayRefundResult;
 import wechat.pay.bean.result.WxPayUnifiedOrderResult;
 import wechat.pay.conf.WxPayConfig;
 import wechat.pay.exception.WxPayException;
@@ -19,10 +23,8 @@ import wechat.pay.service.WxPayService;
 /**
  * <pre>
  *  微信支付接口请求抽象实现类
- * Created by Binary Wang on 2017-7-8.
  * </pre>
  *
- * @author <a href="https://github.com/binarywang">Binary Wang</a>
  */
 public abstract class WxPayServiceAbstractImpl implements WxPayService {
 	
@@ -80,6 +82,30 @@ public abstract class WxPayServiceAbstractImpl implements WxPayService {
 	    } catch (WxPayException e) {
 	      log.error(e.getMessage(), e);
 	      throw e;
+	    } catch (Exception e) {
+	      log.error(e.getMessage(), e);
+	      throw new WxPayException("发生异常，" + e.getMessage(), e);
+	    }
+	  }
+	
+	@Override
+	  public WxPayRefundResult refund(WxPayRefundRequest request) throws WxPayException {
+	    request.checkAndSign(this.getConfig());
+
+	    String url = this.getPayBaseUrl() + "/secapi/pay/refund";
+	    String responseContent = this.post(url, request.toXML(), true);
+	    WxPayRefundResult result = WxPayBaseResult.fromXML(responseContent, WxPayRefundResult.class);
+	    result.checkResult(this);
+	    return result;
+	  }
+	
+	@Override
+	  public WxPayRefundNotifyResult parseRefundNotifyResult(String xmlData) throws WxPayException {
+	    try {
+	      log.debug("微信支付退款异步通知参数：{}", xmlData);
+	      WxPayRefundNotifyResult result = WxPayRefundNotifyResult.fromXML(xmlData, this.getConfig().getMchKey());
+	      log.debug("微信支付退款异步通知解析后的对象：{}", result);
+	      return result;
 	    } catch (Exception e) {
 	      log.error(e.getMessage(), e);
 	      throw new WxPayException("发生异常，" + e.getMessage(), e);

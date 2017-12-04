@@ -1,7 +1,13 @@
 package wechat.pay.service;
 
+
+
+
 import wechat.pay.bean.notify.WxPayOrderNotifyResult;
+import wechat.pay.bean.notify.WxPayRefundNotifyResult;
 import wechat.pay.bean.request.WxOrderComRequest;
+import wechat.pay.bean.request.WxPayRefundRequest;
+import wechat.pay.bean.result.WxPayRefundResult;
 import wechat.pay.bean.result.WxPayUnifiedOrderResult;
 import wechat.pay.conf.WxPayConfig;
 import wechat.pay.exception.WxPayException;
@@ -31,4 +37,22 @@ public interface WxPayService {
 	   * 详见https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=9_7
 	   */
 	  WxPayOrderNotifyResult parseOrderNotifyResult(String xmlData) throws WxPayException;
+	  
+	  /**
+	   * <pre>
+	   * 微信支付-申请退款
+	   * 详见 https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=9_4
+	   * 接口链接：https://api.mch.weixin.qq.com/secapi/pay/refund
+	   * </pre>
+	   *
+	   * @param request 请求对象
+	   * @return 退款操作结果
+	   */
+	  WxPayRefundResult refund(WxPayRefundRequest request) throws WxPayException;
+	  
+	  /**
+	   * 解析退款结果通知
+	   * 详见https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=9_16&index=9
+	   */
+	  WxPayRefundNotifyResult parseRefundNotifyResult(String xmlData) throws WxPayException;
 }
