@@ -11,13 +11,12 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.BasicResponseHandler;
 import org.apache.http.impl.client.CloseableHttpClient;
 
-import com.wechat.common.bean.WxAccessToken;
-import com.wechat.common.bean.result.WxError;
-import com.wechat.common.exception.WxErrorException;
-import com.wechat.common.util.http.HttpType;
-import com.wechat.common.util.http.apache.ApacheHttpClientBuilder;
-import com.wechat.common.util.http.apache.DefaultApacheHttpClientBuilder;
-
+import wechat.common.bean.WxAccessToken;
+import wechat.common.bean.result.WxError;
+import wechat.common.exception.WxErrorException;
+import wechat.common.util.http.HttpType;
+import wechat.common.util.http.apache.ApacheHttpClientBuilder;
+import wechat.common.util.http.apache.DefaultApacheHttpClientBuilder;
 import wechat.mp.api.WxMpConfigStorage;
 import wechat.mp.api.WxMpService;
 

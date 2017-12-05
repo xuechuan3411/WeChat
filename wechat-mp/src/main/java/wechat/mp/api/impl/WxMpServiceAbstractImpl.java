@@ -1,9 +1,9 @@
 package wechat.mp.api.impl;
 
 import com.google.gson.JsonParser;
-import com.wechat.common.exception.WxErrorException;
-import com.wechat.common.util.http.RequestHttp;
 
+import wechat.common.exception.WxErrorException;
+import wechat.common.util.http.RequestHttp;
 import wechat.mp.api.WxMpConfigStorage;
 import wechat.mp.api.WxMpService;
 

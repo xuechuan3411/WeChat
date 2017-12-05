@@ -12,19 +12,17 @@ import org.apache.commons.codec.binary.Base64;
 
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
-import com.wechat.common.util.ToStringUtils;
-import com.wechat.common.util.xml.XStreamInitializer;
 
+import wechat.common.util.ToStringUtils;
+import wechat.common.util.xml.XStreamInitializer;
 import wechat.pay.bean.result.WxPayBaseResult;
 import wechat.pay.exception.WxPayException;
 
 /**
  * <pre>
  *  退款结果通知对象
- *  Created by BinaryWang on 2017/8/27.
  * </pre>
  *
- * @author <a href="https://github.com/binarywang">Binary Wang</a>
  */
 @XStreamAlias("xml")
 public class WxPayRefundNotifyResult extends WxPayBaseResult implements Serializable {

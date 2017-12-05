@@ -10,7 +10,6 @@ import java.io.Serializable;
  * https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=9_4
  * </pre>
  *
- * @author liukaitj
  */
 @XStreamAlias("xml")
 public class WxPayRefundResult extends WxPayBaseResult implements Serializable {

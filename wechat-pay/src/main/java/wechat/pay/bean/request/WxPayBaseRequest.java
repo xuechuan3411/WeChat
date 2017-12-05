@@ -7,22 +7,20 @@ import org.apache.commons.lang3.StringUtils;
 
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
-import com.wechat.common.exception.WxErrorException;
-import com.wechat.common.util.BeanUtils;
-import com.wechat.common.util.ToStringUtils;
-import com.wechat.common.util.xml.XStreamInitializer;
 
+import wechat.common.exception.WxErrorException;
+import wechat.common.util.BeanUtils;
+import wechat.common.util.ToStringUtils;
+import wechat.common.util.xml.XStreamInitializer;
 import wechat.pay.conf.WxPayConfig;
 import wechat.pay.exception.WxPayException;
 import wechat.pay.util.SignUtils;
 
 /**
  * <pre>
- * Created by Binary Wang on 2016-10-24.
  *  微信支付请求对象共用的参数存放类
  * </pre>
  *
- * @author <a href="https://github.com/binarywang">binarywang(Binary Wang)</a>
  */
 public abstract class WxPayBaseRequest {
   /**

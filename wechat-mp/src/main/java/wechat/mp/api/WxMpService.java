@@ -1,6 +1,6 @@
 package wechat.mp.api;
 
-import com.wechat.common.exception.WxErrorException;
+import wechat.common.exception.WxErrorException;
 
 
 public interface WxMpService {

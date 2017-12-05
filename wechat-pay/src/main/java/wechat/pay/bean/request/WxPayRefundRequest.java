@@ -7,8 +7,8 @@ import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.StringUtils;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
-import com.wechat.common.annotation.Required;
 
+import wechat.common.annotation.Required;
 import wechat.pay.conf.WxPayConfig;
 import wechat.pay.exception.WxPayException;
 
@@ -22,10 +22,8 @@ import wechat.pay.exception.WxPayException;
  * <li>类型
  * <li>示例值
  * <li>描述
- * Created by Binary Wang on 2016-10-08.
  * </pre>
  *
- * @author <a href="https://github.com/binarywang">binarywang(Binary Wang)</a>
  */
 @XStreamAlias("xml")
 public class WxPayRefundRequest extends WxPayBaseRequest {

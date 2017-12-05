@@ -4,8 +4,9 @@ import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamConverter;
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
-import com.wechat.common.util.xml.XStreamInitializer;
-import com.wechat.common.util.xml.XStreamCDataConverter;
+
+import wechat.common.util.xml.XStreamCDataConverter;
+import wechat.common.util.xml.XStreamInitializer;
 /**
  * 微信支付订单和退款的异步通知共用的响应类
  */

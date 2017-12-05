@@ -13,8 +13,7 @@ import org.apache.commons.codec.binary.Hex;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.lang3.StringUtils;
 
-import com.wechat.common.util.BeanUtils;
-
+import wechat.common.util.BeanUtils;
 import wechat.pay.constants.WxPayConstants.SignType;
 
 /**

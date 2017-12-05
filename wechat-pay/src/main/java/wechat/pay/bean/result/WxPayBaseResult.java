@@ -23,9 +23,9 @@ import com.google.common.base.Joiner;
 import com.google.common.collect.Maps;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
-import com.wechat.common.util.ToStringUtils;
-import com.wechat.common.util.xml.XStreamInitializer;
 
+import wechat.common.util.ToStringUtils;
+import wechat.common.util.xml.XStreamInitializer;
 import wechat.pay.exception.WxPayException;
 import wechat.pay.service.impl.WxPayServiceAbstractImpl;
 import wechat.pay.util.SignUtils;

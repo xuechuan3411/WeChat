@@ -7,17 +7,16 @@ import java.util.Map;
 
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
-import com.wechat.common.util.BeanUtils;
-import com.wechat.common.util.ToStringUtils;
-import com.wechat.common.util.xml.XStreamInitializer;
 
+import wechat.common.util.BeanUtils;
+import wechat.common.util.ToStringUtils;
+import wechat.common.util.xml.XStreamInitializer;
 import wechat.pay.bean.converter.WxPayOrderNotifyResultConverter;
 import wechat.pay.bean.result.WxPayBaseResult;
 
 /**
  * 支付结果通用通知 ，文档见：https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=9_7
  *
- * @author aimilin6688
  * @since 2.5.0
  */
 @XStreamAlias("xml")

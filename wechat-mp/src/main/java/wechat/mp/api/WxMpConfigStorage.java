@@ -5,8 +5,8 @@ package wechat.mp.api;
 import java.io.File;
 import java.util.concurrent.locks.Lock;
 
-import com.wechat.common.bean.WxAccessToken;
-import com.wechat.common.util.http.apache.ApacheHttpClientBuilder;
+import wechat.common.bean.WxAccessToken;
+import wechat.common.util.http.apache.ApacheHttpClientBuilder;
 
 /**
  * 微信客户端配置存储

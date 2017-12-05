@@ -5,8 +5,8 @@ package wechat.pay.bean.request;
 import org.apache.commons.lang3.StringUtils;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
-import com.wechat.common.annotation.Required;
 
+import wechat.common.annotation.Required;
 import wechat.pay.conf.WxPayConfig;
 import wechat.pay.exception.WxPayException;
 
