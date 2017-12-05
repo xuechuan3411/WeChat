@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <metadata>
   <groupId>com.github.xuechuan3411</groupId>
-  <artifactId>wechat-parent</artifactId>
+  <artifactId>wechat-pay</artifactId>
   <versioning>
     <versions>
       <version>0.0.1-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20171205064333</lastUpdated>
+    <lastUpdated>20171205064353</lastUpdated>
   </versioning>
 </metadata>
